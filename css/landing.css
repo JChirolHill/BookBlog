@@ -1,0 +1,40 @@
+#book-listing .book-item {
+    position: relative;
+}
+
+#book-listing .book-item:hover {
+    cursor: pointer;
+}
+
+#book-listing .book-item:hover img {
+    transform: scale(1.03);
+}
+
+#book-listing .book-item:hover .book-overlay {
+    opacity: 0;
+}
+
+#book-listing .book-image {
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#book-listing a img {
+    width: 100%;
+    transition: 0.5s all;
+}
+
+#book-listing p {
+    margin-bottom: 0;
+}
+
+.book-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background);
+    opacity: 0.5;
+    transition: 0.5s all;
+}

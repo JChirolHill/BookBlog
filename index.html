@@ -1,0 +1,45 @@
+---
+title: There and Back Again
+pagination:
+    data: collections.blog
+    size: 4
+    reverse: true
+css: "landing"
+layout: main_layout
+---
+
+<div class="container-fluid">
+    <div class="text-center mt-4">
+        <a href="{{pagination.href.first}}">First</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        {% if pagination.href.previous %}
+            <a href="{{pagination.href.previous}}">Previous</a>
+        {% else %}
+            <a href="{{pagination.href.previous}}" class="disableClick">Previous</a>
+        {% endif %}
+        &nbsp;&nbsp;|&nbsp;&nbsp{{ pagination.pageNumber | plus-one }}&nbsp;&nbsp|&nbsp;&nbsp;
+        {% if pagination.href.next %}
+            <a href="{{pagination.href.next}}">Next</a>
+        {% else %}
+            <a href="{{pagination.href.next}}" class="disableClick">Next</a>
+        {% endif %}
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="{{pagination.href.last}}">Last</a>
+    </div>
+
+    <div id="book-listing" class="row embossed-edges">
+        {% for post in pagination.items %}
+        <div class="col-12 col-sm-6 col-lg-3 pt-4">
+            <a href="{{post.url}}">
+                <div class="book-item">
+                    <div class="book-image">
+                        <img src="/assets/covers/{{post.data.cover}}" alt="{{post.data.title}}"/>
+                    </div>
+                    <p class="text-center mt-2">{{ post.data.post_date | formatted-date }}</p>
+                    <div class="book-overlay"></div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

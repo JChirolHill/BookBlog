@@ -1,0 +1,22 @@
+---
+title: There and Back Again
+css: "post"
+layout: main_layout
+---
+
+<div class="container-fluid">
+    <div class="embossed-edges py-4">
+        <div class="row">
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                <img src="/assets/covers/{{ cover }}" alt="Cover for {{ title }}">
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center">
+                <div>
+                    <h1 class="text-header">{{ post_title }}</h1>
+                    <h3 class="text-right">{{ post_date | formatted-date }}</h3>
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

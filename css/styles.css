@@ -1,0 +1,59 @@
+:root {
+    --background: #031226;
+    --primary-dark: #0B438C;
+    --primary-light: #2B88D9;
+    --secondary-dark: #59452C;
+    --secondary-light: #B6964A;
+    --highlight: #F5F0DF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    font-family: 'Raleway', sans-serif;
+    color: var(--highlight);
+}
+
+a {
+    color: var(--highlight);
+    transition: 0.5s all;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--secondary-light);
+}
+
+.text-header {
+    font-size: 4em;
+    text-shadow: 2px 2px 5px var(--primary-dark);
+    font-family: "Header";
+}
+
+.disableClick{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+#hero {
+  background-image: url("/assets/butterfly-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  border-bottom: var(--secondary-light) solid 4px;
+}
+
+.embossed-edges {
+    padding: 0 2em;
+    margin: 1em 2em;
+    border-radius: 10px;
+    border-left: var(--secondary-light) solid 4px;
+    border-right: var(--secondary-light) solid 4px;
+}
+
+@font-face {
+    font-family: "Header";
+    src: url("/assets/PhotographSignature.ttf");
+}

@@ -1,0 +1,5 @@
+assets/covers
+posts
+node_modules
+package-lock.json
+_site
