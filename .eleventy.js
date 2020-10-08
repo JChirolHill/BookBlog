@@ -1,4 +1,6 @@
 module.exports = (function (eleventyConfig) {
+    eleventyConfig.setUseGitIgnore(false);
+
     eleventyConfig.addFilter("formatted-date", function (date) {
         if(!(/^([0-9]{1,2}\/){2}[0-9]{2}$/).test(date)){
             return "Improperly formatted date";

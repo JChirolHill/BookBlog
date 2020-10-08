@@ -11,7 +11,9 @@
 }
 
 #book-listing .book-item:hover .book-overlay {
-    opacity: 0;
+    background-color: rgba(3,18,38,0.8); /* background RGB */
+    opacity: 1;
+    color: var(--highlight);
 }
 
 #book-listing .book-image {
@@ -34,7 +36,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--background);
-    opacity: 0.5;
+    background-color: rgba(3,18,38,0); /* background RGB */
+    opacity: 0;
     transition: 0.5s all;
 }
