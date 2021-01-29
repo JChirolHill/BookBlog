@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "eleventy --serve --watch",
-    "build": "eleventy"
+    "start": "eleventy --serve",
+    "build": "eleventy --formats=md,jpg"
   },
   "repository": {
     "type": "git",

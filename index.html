@@ -5,7 +5,7 @@ pagination:
     size: 4
     reverse: true
 css: "landing"
-layout: main_layout
+layout: main_layout.liquid
 ---
 
 <div class="container-fluid">
@@ -32,6 +32,23 @@ layout: main_layout
         <div class="col-12 col-sm-6 col-lg-3 pt-4">
             <a href="{{post.url}}">
                 <div class="book-item">
+                    <div class="text-center mb-2">
+                        {% if post.data.stars >= 1 %}
+                            <i class="fas fa-star"></i>
+                        {% endif %}
+                        {% if post.data.stars >= 2 %}
+                            <i class="fas fa-star"></i>
+                        {% endif %}
+                        {% if post.data.stars >= 3 %}
+                            <i class="fas fa-star"></i>
+                        {% endif %}
+                        {% if post.data.stars >= 4 %}
+                            <i class="fas fa-star"></i>
+                        {% endif %}
+                        {% if post.data.stars >= 5 %}
+                            <i class="fas fa-star"></i>
+                        {% endif %}
+                    </div>
                     <div class="book-image">
                         <img src="/assets/covers/{{post.data.cover}}" alt="{{post.data.post_title}}"/>
                     </div>
@@ -43,5 +60,9 @@ layout: main_layout
             </a>
         </div>
         {% endfor %}
+    </div>
+
+    <div class="text-center my-2">
+        <a href="/rating_system">Rating Scales Info</a>
     </div>
 </div>
